@@ -22,6 +22,7 @@ This project allows users to manage student records through a web interface.
 https://school-managment-flask.onrender.com
 
 ## 📂 Project Structure
+
 app.py
 requirements.txt
 render.yaml
