@@ -43,5 +43,18 @@ http://127.0.0.1:5000
 - The application uses SQLite for simplicity.
 - Free hosting may cause the app to sleep when inactive.
 
+## Project Scope & Security Notes
+This project is built for learning and demonstration purposes.
+
+To keep the code simple and beginner-friendly, some production-level
+features are intentionally out of scope, including:
+- Authentication and authorization
+- CSRF protection
+- Advanced input validation
+- Production-grade database setup
+
+These would be required for real-world applications but are not the
+focus of this educational project.
+
 ## 👤 Author
 Deepanjan Mitra
