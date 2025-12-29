@@ -33,12 +33,17 @@ https://school-management-flask-08vg.onrender.com
 ## 📂 Project Structure
 
 ```text
-app.py 
-requirements.txt 
-render.yaml 
-templates/ 
-├── index.html 
-└── edit.html
+
+school-management-flask/
+├── app.py
+├── requirements.txt
+├── render.yaml
+├── README.md
+├── .gitignore
+└── templates/
+    ├── index.html
+    └── edit.html
+
 ```
 
 ## ▶️ How to Run Locally
