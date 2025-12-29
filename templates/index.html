@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <title>School Management System</title>
     <style>
@@ -8,36 +9,46 @@
             background-color: #f4f6f8;
             padding: 30px;
         }
+
         h1 {
             color: #333;
         }
+
         form {
             margin-bottom: 20px;
         }
-        input, button {
+
+        input,
+        button {
             padding: 8px;
             margin: 5px;
         }
+
         button {
             background-color: #4CAF50;
             color: white;
             border: none;
             cursor: pointer;
         }
+
         table {
             width: 100%;
             border-collapse: collapse;
             margin-top: 20px;
         }
-        th, td {
+
+        th,
+        td {
             border: 1px solid #aaa;
             padding: 10px;
             text-align: center;
         }
+
         th {
             background-color: #333;
             color: white;
         }
+
         a {
             color: red;
             text-decoration: none;
@@ -47,48 +58,61 @@
 
 <body>
 
-<h1>School Management System</h1>
+    <h1>School Management System</h1>
 
-<h2>Add Student</h2>
-<form action="/add" method="post">
-    Roll Number:
-    <input type="number" name="roll" required>
+    <h2>Add Student</h2>
+    <form action="/add" method="post">
+        Roll Number:
+        <input type="number" name="roll" required>
 
-    Name:
-    <input type="text" name="name" required>
+        Name:
+        <input type="text" name="name" required>
 
-    Class:
-    <input type="text" name="class" required>
+        Class:
+        <input type="text" name="class" required>
 
-    Section:
-    <input type="text" name="section" required>
+        Section:
+        <input type="text" name="section" required>
 
-    <button type="submit">Add Student</button>
-</form>
+        <button type="submit">Add Student</button>
+    </form>
 
-<h2>Student Records</h2>
+    <h2>Student Records</h2>
 
-<table>
-    <tr>
-        <th>Roll</th>
-        <th>Name</th>
-        <th>Class</th>
-        <th>Section</th>
-        <th>Action</th>
-    </tr>
+    <table>
+        <tr>
+            <th>Roll</th>
+            <th>Name</th>
+            <th>Class</th>
+            <th>Section</th>
+            <th>Action</th>
+        </tr>
 
-    {% for student in students %}
-    <tr>
-        <td>{{ student.roll }}</td>
-        <td>{{ student.name }}</td>
-        <td>{{ student.class }}</td>
-        <td>{{ student.section }}</td>
-        <td>
-            <a href="/delete/{{ student.roll }}">Delete</a>
-        </td>
-    </tr>
-    {% endfor %}
-</table>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.roll }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.class }}</td>
+            <td>{{ student.section }}</td>
+            <td>
+                <a href="/delete/{{ student.roll }}">Delete</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+
+    <footer style="
+    margin-top: 40px;
+    padding: 15px;
+    text-align: center;
+    font-size: 14px;
+    color: #777;
+    border-top: 1px solid #ddd;
+">
+        © 2025 | School Management System <br>
+        Built using Flask • Developed by Deepanjan
+    </footer>
 
 </body>
+
 </html>
