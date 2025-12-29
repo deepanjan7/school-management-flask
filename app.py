@@ -10,6 +10,26 @@ def get_db():
     return sqlite3.connect(DB_NAME)
 
 
+# 🔒 CRITICAL: ensure table exists (fixes Render crash)
+def init_db():
+    conn = sqlite3.connect(DB_NAME)
+    cursor = conn.cursor()
+    cursor.execute("""
+        CREATE TABLE IF NOT EXISTS students (
+            roll INTEGER PRIMARY KEY,
+            name TEXT NOT NULL,
+            class TEXT NOT NULL,
+            section TEXT NOT NULL
+        )
+    """)
+    conn.commit()
+    conn.close()
+
+
+# Run once on startup
+init_db()
+
+
 @app.route("/", methods=["GET", "POST"])
 def index():
     conn = get_db()
